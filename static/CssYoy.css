@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Secular+One&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -6,10 +8,75 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(145, 77, 209);
+    background-color: rgb(203, 180, 224);
     color: white;
+    font-family: 'Secular One', sans-serif;
+
 }
 
+
+.heders {
+    height: 200px;
+    background-color: rgb(203, 172, 209);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px;
+    margin: 20px 10px;
+}
+
+
+a:hover {
+    background-color: yellow;
+  }
+
+
+.linkk {
+    display: flex;
+    margin: auto 80px;
+}
+
+a {
+    text-decoration: none;
+    background-color: #bdafae;
+    color: rgb(8, 8, 8);
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+
+.pic {
+    /* height: x;
+    width:600px; */
+    width: 98vw;
+    height: 800px;
+    background-color: rgb(203, 172, 209);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    margin: 20px 10px;
+
+    background-image: url(../static/new01.jpg );
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+
+}
+
+.divdiv {
+    height: 200px;
+    width: 750px;
+    background-color: rgb(238, 234, 238);
+    color: black;
+    padding: 16px;
+    margin-left: 600px;
+
+}
 
 
 .continer {
@@ -21,7 +88,7 @@ body {
     display: grid;
 
     grid-template-columns: 1fr 250px 250px 1fr;
-    grid-template-rows: 50px 1fr 250px 250px 1fr;
+    grid-template-rows: 1fr 250px 250px 1fr;
 
     gap: 5px;
 
@@ -29,24 +96,12 @@ body {
 }
 
 
-.heders {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    background-color: rgb(220, 178, 245);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 16px;
-}
-
 .box {
 
     grid-column-start: 2;
     grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
 
     display: grid;
 
@@ -70,13 +125,12 @@ body {
 
 
 .box>div:hover {
-
     opacity: 0.7;
     transform: scale(0.98);
 }
 
 
-.rent {
+.box>div {
 
     display: flex;
     align-items: center;
@@ -84,84 +138,67 @@ body {
     justify-content: center;
 }
 
-.rent1 {
-    display: flex;
-    align-items: center;
+
+
+.left {
+    width: 400px;
+  
+    padding: 15px 5px;
+    font-family: 'Secular One', sans-serif;
+    text-align:right;
+} 
+
+.left h1{
+    font-size: 50px;
+    margin-bottom:1px;
+
+}
+
+.left p{
+margin-top:1px;
+
+}
+
+footer{
+    height: 400px;
+    width: 98vw;
+    background-color: rgb(40, 37, 41);
     text-align: center;
-    justify-content: center;
+    padding: 200px auto;
 
 }
 
-.rent2 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-
+footer p{
+    padding: 50px 54px;
 }
 
-.rent3 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-
+.email{
+    margin: 50px auto;
+    width: 250px;
 }
 
-
-.heder {
-    background-color: rgb(54, 56, 59);
-
-}
-
-
-
-
-.formm {
-    width: 100vw;
-    height: 100vh;
-    font-size: 20px;
-
-    display: grid;
-
-
-    grid-template-columns: 1fr 250px 1fr;
-    grid-template-rows: 50px 1fr 50px;
-    gap: 5px;
-
-    padding: 10px;
-    
-
-}
-
-.forr{
-grid-column-start:2;
-grid-column-end:3;
-grid-row-start:2;
-grid-row-end:3;
-
-padding:  16px;
-border: 1px solid black;
-/* padding: 40px; */
-}
-
-
-
-.forr{
-
-    margin: 0 auto;
-}
-
-
-.ull{
-font-size: 25px;
-color:rgb(134, 134, 114);
-margin-top: 100px;
-
-}
-
-.forrr{
-margin-top: 100px auto;
-margin-top: 70px;
-
-}
+input[type=text], select {
+    width: 100%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  

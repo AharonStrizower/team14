@@ -15,7 +15,7 @@ body {
 }
 
 
-.heders {
+.headers {
     height: 200px;
     background-color: rgb(203, 172, 209);
     display: flex;
@@ -32,7 +32,7 @@ a:hover {
   }
 
 
-.linkk {
+.link {
     display: flex;
     margin: auto 80px;
 }

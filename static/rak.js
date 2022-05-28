@@ -3,13 +3,14 @@ function Product(_name,_disci,_pic)
 this.name = _name;
 this.disci = _disci;
 this.pic = _pic;
+// this.makt = _makt;
 
 }
 
 
 Product.prototype.addTOHtml = function()
 {
-   // document.getElementById('HR').innerHTML = '';
+  
    
    this.gerger = document.createElement("div");
    this.gerger.className = "pro";
@@ -28,11 +29,9 @@ Product.prototype.addTOHtml = function()
   
    this.ger.innerHTML += "<span>" + this.name  + "</span>" ;
    this.ger.innerHTML += " <h5> "  + this.disci  +   "</h5>" ;
+   // this.ger.innerHTML += " <h5> "  + this.disci  +   "</h5>" ;
+   // this.ger.innerHTML += " <h5> "  + this.makt  +   "</h5>" ;
    this.ger.innerHTML += `<a href="#"> <span class="material-symbols-outlined cart">add_box</span></a>`;
-
    this.gerger.appendChild(this.ger)
 }
 
-Product.prototype.addTOHtml2 = function(){
-   document.getElementById('HR').innerHTML = ''
-}

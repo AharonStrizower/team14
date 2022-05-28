@@ -24,10 +24,7 @@ body {
     gap: 5px;
 
     padding: 10px;
-
-
 }
-
 
 
 .forr {
@@ -60,3 +57,31 @@ margin-top: 100px auto;
 margin-top: 70px;
 
 }
+
+
+.link .active {
+    background-color: #a9b094df;
+  }
+
+
+  
+
+  @media only screen and (max-width: 600px) {
+    body {
+        background-color: lightskyblue;
+    }
+
+    .link {
+        display: none;
+    }
+
+
+    .navi {
+
+        display: block;
+
+        position: sticky;
+        top: 0;
+       
+    }
+  }

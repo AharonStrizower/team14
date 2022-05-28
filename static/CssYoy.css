@@ -28,7 +28,7 @@ body {
 
 
 a:hover {
-    background-color: yellow;
+    background-color: rgb(221, 221, 150);
   }
 
 
@@ -62,7 +62,7 @@ a {
     padding: 16px;
     margin: 20px 10px;
 
-    background-image: url(../static/product/new01.jpg );
+    background-image: url(../static/new01.jpg );
     background-repeat: no-repeat;
     background-position: 10% 50%;
 
@@ -118,7 +118,7 @@ a {
 .box>div {
 
     border: 1px solid black;
-    background-image: url("../static/product/play-stone-1743645_1920.jpg");
+    background-image: url("play-stone-1743645_1920.jpg");
     background-attachment: fixed;
     background-size: cover;
 }
@@ -202,3 +202,29 @@ input[type=text], select {
     background-color: #45a049;
   }
   
+
+  .link .active {
+    background-color: #0f1109df;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    body {
+        background-color: lightskyblue;
+    }
+
+    .link {
+        display: none;
+    }
+
+
+    .navi {
+
+        display: block;
+
+        position: sticky;
+        top: 0;
+       
+    }
+  }

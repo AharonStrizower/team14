@@ -28,7 +28,7 @@ body {
 
 
 a:hover {
-    background-color: yellow;
+    background-color: rgb(221, 221, 150);
   }
 
 
@@ -202,3 +202,29 @@ input[type=text], select {
     background-color: #45a049;
   }
   
+
+  .link .active {
+    background-color: #0f1109df;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    body {
+        background-color: lightskyblue;
+    }
+
+    .link {
+        display: none;
+    }
+
+
+    .navi {
+
+        display: block;
+
+        position: sticky;
+        top: 0;
+       
+    }
+  }

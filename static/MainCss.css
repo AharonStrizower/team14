@@ -4,54 +4,104 @@
     box-sizing: border-box;
 }
 
+.headers{
+    background-color: rgb(140, 99, 173);
+    display: grid;
+    align-items: flex-end;
+    animation: slideDown;
+    animation-duration: 1s;
+    grid-template-areas: 
+    "logo navbar";
+    padding-bottom: 50px;
+}
+
+/***** רספונסיביות לראש העמוד *****/
+
+@media screen and (max-width: 800px) {
+    .headers{
+        margin: 0;
+        grid-template-columns: 100%;
+        justify-items: center;
+        grid-template-rows: repeat(auto, 2);
+        display: grid;
+        grid-template-areas: 
+        "logo"
+        "navbar";
+    }
+  }
+
+.logo {
+    grid-area: logo;
+    width: 400px;
+    font-family: 'Secular One', sans-serif;
+    text-align:center;
+} 
+
+.logo h1{
+    font-size: 50px;
+    margin-bottom:1px;
+
+}
+
+.logo p{
+margin-top:1px;
+
+}
+.navbar{
+    grid-area: navbar;
+    width: 500px ;
+    height: 100px;
+    overflow: auto;
+    background-color: #bdafae;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+
+
+} 
+
+a.nav{
+    padding: 20px;
+    color: rgb(8, 8, 8);
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px;
+} 
+
+.navbar>a.nav:hover {
+    background-color: yellow;
+    animation: glowAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+.active {
+    background-color: white;
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+/***** אנימציות *****/
+
+@keyframes glowAnimation{
+    50%{box-shadow: 0px 0px 50px black;}
+}
+
+@keyframes slideDown {
+    from{margin-top: 100%;}
+    to{margin-top: 0%;}
+}
 
 body {
-    margin: 0;
-    padding: 0;
+    direction: rtl;
     background-color: rgb(203, 180, 224);
     color: white;
     font-family: 'Secular One', sans-serif;
+  
 
 }
-
-
-.headers {
-    height: 200px;
-    background-color: rgb(203, 172, 209);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 16px;
-    margin: 20px 10px;
-
-    position: sticky;
-    top: 0;
-    left: 0;
-}
-
-
-a:hover {
-    background-color: yellow;
-  }
-
-
-.link {
-    display: flex;
-    margin: auto 80px;
-}
-
-a {
-    text-decoration: none;
-    background-color: #bdafae;
-    color: rgb(8, 8, 8);
-    padding: 14px 25px;
-    text-align: center;
-    display: inline-block;
-}
-
-
-
 
 .pic {
     /* height: x;
@@ -72,19 +122,19 @@ a {
 
 }
 
-.divdiv {
-    height: 200px;
+.helloText{
+    height: 300px;
     width: 750px;
     background-color: rgb(238, 234, 238);
     color: black;
-    padding: 16px;
+    padding: 5px;
     margin-left: 600px;
 
 }
 
 
 .continer {
-
+  
     width: 100vw;
     height: 100vh;
     font-size: 20px;
@@ -101,7 +151,7 @@ a {
 
 
 .box {
-
+    
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
@@ -118,13 +168,19 @@ a {
 
 }
 
-
+.rent2>a, .rent3>a{
+    color: white;
+}
 .box>div {
 
     border: 1px solid black;
-    background-image: url("/static/product/play-stone-1743645_1920.jpg");
+    background-image: url("../static/product/play-stone-1743645_1920.jpg");
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 
@@ -133,34 +189,7 @@ a {
     transform: scale(0.98);
 }
 
-
-.box>div {
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-
-.left {
-    width: 400px;
-  
-    padding: 15px 5px;
-    font-family: 'Secular One', sans-serif;
-    text-align:right;
-} 
-
-.left h1{
-    font-size: 50px;
-    margin-bottom:1px;
-
-}
-
-.left p{
-margin-top:1px;
-
-}
+/***** עיצוב התחתית *****/
 
 footer{
     height: 400px;
@@ -168,6 +197,7 @@ footer{
     background-color: rgb(40, 37, 41);
     text-align: center;
     padding: 200px auto;
+    color: white;
 
 }
 
@@ -180,7 +210,7 @@ footer p{
     width: 250px;
 }
 
-input[type=text], select {
+input[type=email], select {
     width: 100%; 
     padding: 12px 20px;
     margin: 8px 0;
@@ -204,25 +234,6 @@ input[type=text], select {
   input[type=submit]:hover {
     background-color: #45a049;
   }
-  
-
-
-  /* ---------------- */
-
-
-  
-.contact-container{
-    margin: 0;
-    grid-template-columns: 100%; 
-    grid-template-rows: 10% 80% 10%;
-    display: grid;
-    grid-template-areas: 
-    "headers"
-    "form"
-    "footer";
-}
-
-
 .formm {
     width: 100vw;
     height: 80vh;
@@ -257,3 +268,94 @@ margin-top: 100px auto;
 margin-top: 70px;
 
 }
+.aboutText{
+    border-style: outset;
+    border-width: 6px;
+    border-color: white;
+    border-radius: 25px;
+    padding: 10px;
+    width: 800px;
+    height: 600px;
+    color: black;
+    transform: translateX(-40%);
+}
+
+h2{
+    text-align: center;
+}
+
+/***** "עיצוב עמוד "האזור האישי *****/
+
+.login, .signUp {
+	margin:0 auto;
+	max-width:500px;
+  }
+  .login-header, .signUp-header {
+	color:black;
+	text-align:center;
+	font-size:200%;
+  }
+
+  .login-form, .signUp-form {
+	border:.5px solid #fff;
+	background-color: 	rgb(144,238,144);
+	border-radius:10px;
+	box-shadow:0px 0px 10px #000;
+	color: black;
+    box-sizing:border-box;
+	padding-top:15px;
+	padding-bottom:10%;
+	margin:5% auto;
+	text-align:center;
+
+  }
+  .login-form h3, .signUp-form h3 {
+	text-align:center;
+	color:#fff;
+  }
+ 
+  .login input[type="email"],
+  .login input[type="password"],
+  .signUp input[type="fullName"],
+  .signUp input[type="password"],
+  .signUp input[type="email"] {
+	max-width:400px;
+	width: 80%;
+	line-height:3em;
+	font-family: 'Secular One', sans-serif;
+	margin:1em 2em;
+	border-radius:5px;
+	border:2px solid #f2f2f2;
+	outline:none;
+	padding-left:10px;
+	direction: ltr;
+  }
+
+  .login-form input[type="submit"],
+  .signUp-form input[type="submit"]{
+	height:50px;
+	width:200px;
+	background:#fff;
+	border:1px solid #f2f2f2;
+	border-radius:20px;
+	color: black;
+	text-transform:uppercase;
+	font-family: 'Secular One', sans-serif;
+	cursor:pointer;
+
+  }
+  
+  .signUp_Button {
+	color:#0f0e0e;
+	margin:20px 0px 5px 50%;
+    text-align: right;
+	text-decoration:underline;
+	cursor:pointer;
+  }
+
+  .no-access {
+	color:#0f0e0e;
+	margin:5px 0px 5px 55%;
+	text-decoration:underline;
+	cursor:pointer;
+  }

@@ -1,79 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>אזור אישי</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/MainCss.css">
-    <link rel="stylesheet" href="/static/UserCss.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <title>Galery Page</title>
-
-    <title>User Page</title>
-    <script src="../static/UserJavaScript.js"></script>
+    <link rel="stylesheet" href="../static/MainCss.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body class="user-container">
    
     <div class="headers">
 
-        <div class="left">
-            <h1>חברים לשיתוף</h1>
+        <div class="logo">
+            <h1>צעצועים להמונים</h1>
             <p id="p1">רשת חברתית לשיתוף משחקים</p>
         </div>
 
-        <div>
-            <div class="link">
+        <header class="navbar">
+            <a class="nav" href="/templates/HomePage.html">דף הבית</a></li>
+            <a class="nav" href="/templates/products.html">גלריית מוצרים זמינים</a></li>
+            <a class="active" href="/templates/UserPage.html">אזור אישי</a></li>
+            <a class="nav" href="/templates/Contact.html">צור קשר</a></li>
+            <a class="nav"><span class="material-symbols-outlined"> shopping_cart_checkout</span>
+        <header>
 
-                <div class="link">
+    </div>
 
-                    <a href="/templates/templates/UserPage.html">אזור אישי</a>
-                    <a href="/templates/templates/HomePage.html">דף הבית</a>
-                    <a href="/templates/templates/Contact.html">צור קשר</a>
-                    <a href="/templates/templates/products.html">גלריית מוצרים זמינים</a>
-
-                </div>
-
-                <a href="UserPage.html"><span class="material-symbols-outlined"> shopping_cart_checkout</span>
-                </a>
-            </div>
+    <div class="login">
+        <div class="login-header">
+           <h1>התחברות</h1>
         </div>
+
+          <form action="URL" method="post" class="login-form">
+            <label for="email">מייל</label><br>
+            <input type="email" id="email" placeholder="Israe@post.bgu.ac.il" required><br>
+            <label for="password">סיסמה</label><br>
+            <input type="password" id="password" placeholder="aa123456" maxlength="8" required><br>
+            <input type="submit" value="התחברות"><br><br>
+            <h4><a class="signUp_Button" href="/templates/SignUpPage.html">משתמש חדש? הירשם לאתר</a></h4><br><br>
+            <h4 class="no-access">שכחת את הסיסמה?</h4>
+          </form>
     </div>
 
+    <footer>
 
+      <p>הזינו מייל והכנסו לרשימת התפוצה שלנו</p>
 
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+      <div class="email">
 
-<div class="login">
-  <div class="login-header">
-    <h1>התחברות</h1>
-  </div>
-  <div class="login-form">
-    <h3>מייל</h3>
-    <input type="email" placeholder="email"/><br>
-    <h3>סיסמה</h3>
-    <input type="password" placeholder="Password"/>
-    <br>
-    <input type="button" value="התחברות" class="login-button"/>
-    <br>
-    <a class="sign-up">להרשמה</a>
-    <br>
-    <h6 class="no-access">?שכחת את הסיסמה</h6>
-  </div>
-</div>
-<div class="error-page">
-  <div class="try-again">Error: Try again?</div>
-</div>
-</body>
-<footer>
-
-    <p>הזינו מייל והכנסו לרשימת התפוצה שלנו</p>
-
-    <div class="email">
-        <form action="#">
-            <label for="fname">email</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your email..">
-            <input type="submit" value="Submit">
+        <form action="URL" method="post">
+          <label for="email">מייל</label><br>
+          <input type="email" id="email" placeholder="Israe@post.bgu.ac.il"><br>
+          <input type="submit" value="שליחה">
         </form>
-    </div>
 
-</footer>
+      </div>
+
+    </footer>
+
+</body>
+
 </html>

@@ -123,6 +123,49 @@ body {
 
 }
 
+<<<<<<< HEAD
+
+.headers {
+    height: 200px;
+    background-color: rgb(203, 172, 209);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px;
+    margin: 20px 10px;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+
+a:hover {
+    background-color: rgb(221, 221, 150);
+  }
+
+
+
+.link {
+    display: flex;
+    margin: auto 80px;
+}
+
+a {
+    text-decoration: none;
+    background-color: #bdafae;
+    color: rgb(8, 8, 8);
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+
+=======
+>>>>>>> 4f158bcf28ba99ef944d9cda13397a910bcb85e4
 .pic {
     /* height: x;
     width:600px; */
@@ -289,6 +332,33 @@ margin-top: 100px auto;
 margin-top: 70px;
 
 }
+<<<<<<< HEAD
+
+.link .active {
+    background-color: #a9b094df;
+  }
+
+  
+
+  @media only screen and (max-width: 600px) {
+    body {
+        background-color: lightskyblue;
+    }
+
+    .link {
+        display: none;
+    }
+
+
+    .navi {
+
+        display: block;
+
+        position: sticky;
+        top: 0;
+       
+    }
+=======
 .aboutText{
     border-style: outset;
     border-width: 6px;
@@ -379,4 +449,5 @@ h2{
 	margin:5px 0px 5px 55%;
 	text-decoration:underline;
 	cursor:pointer;
+>>>>>>> 4f158bcf28ba99ef944d9cda13397a910bcb85e4
   }
